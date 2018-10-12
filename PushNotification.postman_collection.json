@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "464e2fbe-fca8-49b0-b1d4-2e93af0ec8d0",
+		"name": "PushNotification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Data Push",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\": \"/topics/general\",\n\t\"data\": {\n\t\t\"title\": \"Test black\",\n\t\t\"body\": \"Freddo 2x1\",\n\t\t\"sound\": \"default\"\n\t},\n\t\"priority\": 10\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notif Push",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "key="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"to\": \"/topics/general\",\n\t\"notification\": {\n\t\t\"title\": \"Test black\",\n\t\t\"body\": \"Freddo 2x1\",\n\t\t\"sound\": \"viola2.mp3\",\n\t\t\"vibrate\":\"true\"\n\t},\n\t\"priority\": 10\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestPushNotification</string>
+    <string name="subscribe_to_news">Subscribe</string>
+    <string name="log_token">Log Token</string>
+    <string name="channel_name">channel_general</string>
+    <string name="channel_description">push notifications general</string>
+</resources>
